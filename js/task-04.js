@@ -7,12 +7,11 @@ createBtn.addEventListener('click', () => createBoxes(input.value));
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
-  // Очистимо попередні елементи перед створенням нових
   destroyBoxes();
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
-    const size = 30 + i * 10; // Збільшуємо розмір кожного нового елемента
+    const size = 30 + i * 10;
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
